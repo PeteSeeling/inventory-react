@@ -1,4 +1,4 @@
-import { client, checkError } from './client';
+import { client, checkError } from './services/client';
 
 export function getUser() {
   return client.auth.session();
