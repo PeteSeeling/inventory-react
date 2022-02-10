@@ -23,7 +23,7 @@ export async function logout() {
   return window.location.href = './';
 }
 
-export async function createGame(pizza){
+export async function createPizza(pizza){
   const response = await client
     .from('pizzas')
     .insert([pizza]);
