@@ -46,6 +46,13 @@ function App() {
                   : <AuthPage setUser={setUser} />
               }
             </Route>
+            <Route exact path="create">
+              {
+                user
+                  ? <CreatePage />
+                  : <AuthPage setUser={setUser} />
+              }
+            </Route>
 
           </Switch>
         </main>
