@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { getUser } from './fetch-utils';
 import AuthPage from './AuthPage';
 import CreatePage from './CreatePage';
+import DetailPage from './DetailPage';
 import { BrowserRouter as Router, NavLink, Switch, Route, Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 import { logout } from './fetch-utils';
