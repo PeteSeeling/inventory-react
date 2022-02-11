@@ -5,6 +5,7 @@ import { getUser } from './fetch-utils';
 import AuthPage from './AuthPage';
 import CreatePage from './CreatePage';
 import DetailPage from './DetailPage';
+import ListPage from './ListPage';
 import { BrowserRouter as Router, NavLink, Switch, Route, Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 import { logout } from './fetch-utils';
@@ -51,6 +52,20 @@ function App() {
               {
                 user
                   ? <CreatePage />
+                  : <AuthPage setUser={setUser} />
+              }
+            </Route>
+            <Route exact path="/pizzas/:id">
+              {
+                user
+                  ? <DetailPage />
+                  : <AuthPage setUser={setUser} />
+              }
+            </Route>
+            <Route exact path="/pizzas">
+              {
+                user
+                  ? <ListPage />
                   : <AuthPage setUser={setUser} />
               }
             </Route>

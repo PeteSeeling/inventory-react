@@ -43,8 +43,8 @@ export default function CreatePage(){
             Type of Sauce
           <select value={sauce} onChange={e => setSauce(e.target.value)}>
             <option>Spicy</option>
-            <option>Regualar</option>
-            <option>Cheese Only</option>
+            <option>Organic</option>
+            <option>Tomato</option>
           </select>
         </label>
         <button>Create Your Pizza</button>
