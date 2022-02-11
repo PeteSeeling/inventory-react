@@ -30,8 +30,8 @@ export default function AuthPage(props) {
           <input value={password} required type="password" name="password" onChange={e => setPassword(e.target.value)} />
         </label>
         <div className='login-buttons'>
-          <button onClick={handleSignIn}>Sign In</button>
-          <button onClick={handleSignUp}>Sign Up</button>
+          <button className="buttons" onClick={handleSignIn}>Sign In</button>
+          <button className="buttons" onClick={handleSignUp}>Sign Up</button>
         </div>
       </form>
     </div>

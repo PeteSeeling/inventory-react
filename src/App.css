@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -54,4 +55,10 @@
 .login-buttons{
   margin:5px;
   margin-left:5px;
+}
+.buttons{
+  margin:5px;
+  width:100px;
+  height:50px;
+
 }

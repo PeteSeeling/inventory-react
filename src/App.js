@@ -32,10 +32,12 @@ function App() {
     <Router>
       <div className="App">
         <header>
+          
           {
             user &&
-          <><NavLink to="/pizzas">Pizza List</NavLink>
-            <NavLink to="/create">Create Pizza</NavLink>
+          <>
+            <button className='buttons'><NavLink to="/pizzas">Pizza List</NavLink></button>
+            <button className="buttons"><NavLink to="/create">Create Pizza</NavLink></button>
             <button onClick={handleLogout}>Logout Button</button></>}
         </header>
 

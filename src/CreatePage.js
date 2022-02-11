@@ -50,7 +50,7 @@ export default function CreatePage(){
             <option>Tomato</option>
           </select>
         </label>
-        <button>Create Your Pizza</button>
+        <button className='buttons'>Create Your Pizza</button>
       </form>
     </div>
   );
