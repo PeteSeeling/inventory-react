@@ -20,7 +20,7 @@ export default function AuthPage(props) {
   return (
     <div className='auth'>
       <h1>Pizzas</h1>
-      <form>
+      <form className='login-form'>
         <label>
                   Email
           <input value={email} required type="email" name="email" onChange={e => setEmail(e.target.value)} />
@@ -29,8 +29,10 @@ export default function AuthPage(props) {
             password
           <input value={password} required type="password" name="password" onChange={e => setPassword(e.target.value)} />
         </label>
-        <button onClick={handleSignIn}>Sign In</button>
-        <button onClick={handleSignUp}>Sign Up</button>
+        <div className='login-buttons'>
+          <button onClick={handleSignIn}>Sign In</button>
+          <button onClick={handleSignUp}>Sign Up</button>
+        </div>
       </form>
     </div>
   );
