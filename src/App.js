@@ -10,7 +10,6 @@ import { BrowserRouter as Router, NavLink, Switch, Route, Redirect } from 'react
 
 import { logout } from './fetch-utils';
 
-
 function App() {
   const [user, setUser] = useState(localStorage.getItem('supabase.auth.token'));
 
