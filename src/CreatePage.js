@@ -26,6 +26,7 @@ export default function CreatePage(){
         <label>
             Pizza Crust
           <select value={crust} onChange={e => setCrust(e.target.value)}>
+            <option>Pick Your Crust</option>
             <option>Thick</option>
             <option>Thin</option>
             <option>Stuffed</option>
@@ -34,6 +35,7 @@ export default function CreatePage(){
         <label>
             Type of cheese
           <select value={cheese} onChange={e => setCheese(e.target.value)}>
+            <option>None</option>
             <option>Mozzerella</option>
             <option>Provolone</option>
             <option>Swiss</option>
@@ -42,6 +44,7 @@ export default function CreatePage(){
         <label>
             Type of Sauce
           <select value={sauce} onChange={e => setSauce(e.target.value)}>
+            <option>None</option>
             <option>Spicy</option>
             <option>Organic</option>
             <option>Tomato</option>
