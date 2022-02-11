@@ -33,7 +33,7 @@ function App() {
           {
             user &&
           <><NavLink to="/pizzas">Pizza List</NavLink>
-            <NavLink to="/Create">Create Pizza</NavLink>
+            <NavLink to="/create">Create Pizza</NavLink>
             <button onClick={handleLogout}>Logout Button</button></>}
         </header>
 
@@ -42,11 +42,11 @@ function App() {
             <Route exact path="/">
               {
                 user
-                  ? <Redirect to="pizzas" />
+                  ? <Redirect to="/pizzas" />
                   : <AuthPage setUser={setUser} />
               }
             </Route>
-            <Route exact path="create">
+            <Route exact path="/create">
               {
                 user
                   ? <CreatePage />

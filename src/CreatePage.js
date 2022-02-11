@@ -13,7 +13,7 @@ export default function CreatePage(){
     e.preventDefault();
 
     await createPizza({ name, crust, cheese, sauce });
-    history.push('/Pizzas');
+    history.push('/pizzas');
   }
   return (
     <div className='create'>
@@ -21,29 +21,33 @@ export default function CreatePage(){
         <h2>Add Pizza</h2>
         <label>
             Pizza name
-          <input value={name} onChange={e => setName(e.target.value)} />
+          <input required value={name} onChange={e => setName(e.target.value)} />
         </label>
         <label>
             Pizza Crust
-          <select value={crust} onChange={e => setCrust(e.target.value)} />
-          <option>Thick</option>
-          <option>Thin</option>
-          <option>Stuffed</option>
+          <select value={crust} onChange={e => setCrust(e.target.value)}>
+            <option>Thick</option>
+            <option>Thin</option>
+            <option>Stuffed</option>
+          </select>
         </label>
         <label>
             Type of cheese
-          <select value={cheese} onChange={e => setCheese(e.target.value)} />
-          <option>Mozzerella</option>
-          <option>Provolone</option>
-          <option>Swiss</option>
+          <select value={cheese} onChange={e => setCheese(e.target.value)}>
+            <option>Mozzerella</option>
+            <option>Provolone</option>
+            <option>Swiss</option>
+          </select>
         </label>
         <label>
             Type of Sauce
-          <select value={sauce} onChange={e => setSauce(e.target.value)} />
-          <option>Spicy</option>
-          <option>Regualar</option>
-          <option>Cheese Only</option>
+          <select value={sauce} onChange={e => setSauce(e.target.value)}>
+            <option>Spicy</option>
+            <option>Regualar</option>
+            <option>Cheese Only</option>
+          </select>
         </label>
+        <button>Create Your Pizza</button>
       </form>
     </div>
   );

@@ -31,7 +31,7 @@ export async function createPizza(pizza){
   return checkError(response);
 }
 
-export async function getGames() {
+export async function getPizzas() {
   const response = await client
     .from('pizzas')
     .select();
@@ -39,7 +39,7 @@ export async function getGames() {
   return checkError(response);    
 }
 
-export async function getGameById(id) {
+export async function getPizzaById(id) {
   const response = await client
     .from('pizzas')
     .select()
