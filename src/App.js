@@ -1,4 +1,3 @@
-
 import './App.css';
 import { useState, useEffect } from 'react';
 import { getUser } from './fetch-utils';
@@ -7,7 +6,6 @@ import CreatePage from './CreatePage';
 import DetailPage from './DetailPage';
 import ListPage from './ListPage';
 import { BrowserRouter as Router, NavLink, Switch, Route, Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-
 import { logout } from './fetch-utils';
 
 function App() {
@@ -16,7 +14,6 @@ function App() {
   useEffect(() => {
     async function fetchUser(){
       const user = await getUser();
-
       if (user) setUser(user);
     }
     fetchUser();
@@ -25,13 +22,11 @@ function App() {
   async function handleLogout() {
     await logout('');
     setUser('');
-
   }
   return (
     <Router>
       <div className="App">
         <header>
-          
           {
             user &&
           <>
@@ -70,13 +65,10 @@ function App() {
                   : <AuthPage setUser={setUser} />
               }
             </Route>
-
           </Switch>
         </main>
-    
       </div>
     </Router>
   );
 }
-
 export default App;

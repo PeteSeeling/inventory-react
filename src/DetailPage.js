@@ -3,14 +3,12 @@ import { getPizzaById } from './fetch-utils';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function DetailPage() {
-
   const [pizza, setPizza] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
     async function fetchSinglePizza(){
       const response = await getPizzaById(id);
-
       setPizza(response);
     }
     fetchSinglePizza();
