@@ -15,6 +15,7 @@ export default function CreatePage(){
     await createPizza({ name, crust, cheese, sauce });
     history.push('/pizzas');
   }
+
   return (
     <div className='create'>
       <form onSubmit={handleSubmit}>
@@ -23,6 +24,7 @@ export default function CreatePage(){
             Pizza name
           <input required value={name} onChange={e => setName(e.target.value)} />
         </label>
+
         <label>
             Pizza Crust
           <select value={crust} onChange={e => setCrust(e.target.value)}>
@@ -32,6 +34,7 @@ export default function CreatePage(){
             <option>Stuffed</option>
           </select>
         </label>
+
         <label>
             Type of cheese
           <select value={cheese} onChange={e => setCheese(e.target.value)}>
@@ -41,6 +44,7 @@ export default function CreatePage(){
             <option>Swiss</option>
           </select>
         </label>
+
         <label>
             Type of Sauce
           <select value={sauce} onChange={e => setSauce(e.target.value)}>
@@ -54,5 +58,4 @@ export default function CreatePage(){
       </form>
     </div>
   );
-
 }
